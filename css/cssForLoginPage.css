@@ -1,0 +1,33 @@
+body{
+	background-color: #00cc99;
+}
+
+.myContainer{
+	max-width: 400px;
+	min-width: 300px;
+	min-height: 350px;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.myform{
+	padding: 1em;
+}
+
+.input-group{
+	margin: 1em 0;
+}
+
+.input-group input{
+	height: 4em;
+}
+
+.mySpan:hover{
+ 	border: 2px solid #9dd9d9;
+ 	cursor: pointer; 
+	cursor: hand;
+}
+
+ul > li{
+	margin: 0 -1px -1px -1px !important;
+}

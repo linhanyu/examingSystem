@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0。。。 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>用户登录</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<link rel="stylesheet" type="text/css" href="css/cssForLoginPage.css">	
+
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		
+		var button;
+		var input;
+
+		
+		function loadPage(){
+			button = document.getElementById("basic-addon2");
+			input = document.getElementById("password");
+	
+			button.onclick = viewPassword;
+			button.onmouseout = hidePassword;
+			
+		}
+
+		function viewPassword(){
+			// var button = document.getElementById("basic-addon2");
+			// var input = document.getElementById("password");
+			input.type = 'text';
+			button.style.backgroundColor = "#d4d4d4";
+		}	
+
+		function hidePassword(){
+			// var button = document.getElementById("basic-addon2");
+			// var input = document.getElementById("password");
+			input.type = "password";
+			button.style.backgroundColor = "#eee";
+		}
+
+
+	</script>
+</head>
+<body onload="loadPage()">
+
+	<h1 class="text-center" style="color: white">Enimaxe</h1>
+
+<div class="container-fluid" style="margin-top:3em;	max-width: 400px; min-width: 300px;border-radius: 5px;">
+	<ul class="nav nav-tabs text-center" style="-webkit-margin-before:0;" role="tasklist">
+		<li class="active" style="width: 50%; margin: 0;"><a href="#first" role="tab" data-toggle="tab">登录</a></li>
+		<li style="width: 50%"><a href="#second" role="tab" data-toggle="tab">注册</a></li>
+	</ul>
+		
+</div>
+	
+<div class="container-fluid myContainer" style="position:relative; ">
+	<div class="tab-content">
+		<div class="tab-pane active fade in" id="first">
+			<form role="form" class="myform">
+			  <div class="form-group">
+			  	<div class="input-group">
+			  		<span class="input-group-addon" id="basic-addon1">@</span>
+			  	    <input type="text" class="form-control" id="name" placeholder="Your e-mail">	
+			  	</div>
+
+			 	<div class="input-group">
+			 		<input type="password" class="form-control myInput" id="password" placeholder="Your password">
+			 		<span  class="input-group-addon  mySpan " id="basic-addon2">
+			 			<span class="glyphicon glyphicon-eye-open" ></span>
+			 		</span>
+			 	</div>
+			  </div>
+			  <button type="submit" class="btn btn-lg btn-primary pull-left" style="position: absolute; right: 1.5em; bottom: 1em">登	录</button>
+			  <button type="button" class="btn btn-default"  style="position: absolute; right: 1.3em; bottom: -2.5em; border: none; background: transparent; color: white; text-decoration:underline; ">忘记密码？</button>
+			</form>		
+		</div>
+
+		<!-- 注册面板		 -->
+		<div class="tab-pane fade" id="second">
+			<form role="form" class="myform">
+			  <div class="form-group">
+			  	<div class="input-group">
+			  		<span class="input-group-addon" id="basic-addon1">@</span>
+			  	    <input type="text" class="form-control" id="name" placeholder="Input e-mail">	
+			  	</div>
+
+			 	<div class="input-group">
+			 		<input type="password" class="form-control myInput" id="password" placeholder="Input password">
+			 		<span  class="input-group-addon  mySpan " id="basic-addon2">
+			 			<span class="glyphicon glyphicon-eye-open" ></span>
+			 		</span>
+			 	</div>
+
+			 	<div class="input-group">
+			 		<input type="password" class="form-control myInput" id="confirmPassword" placeholder="Confirm your password">
+			 		<span  class="input-group-addon  mySpan " id="basic-addon3">
+			 			<span class="glyphicon glyphicon-eye-open" ></span>
+			 		</span>
+			 	</div>
+
+			 	
+			 	<div class="input-group">
+			 		<span  class="input-group-addon  mySpan " id="basic-addon3">
+			 			<span class="glyphicon glyphicon-eye-open" ></span>
+			 		</span>
+			 		<input type="text" name="form-control-myInput"  placeholder="Input nickname">
+			 	</div>
+
+			  </div>
+			  <button type="submit" class="btn btn-lg btn-primary pull-left" style="position: absolute; right: 1.5em; bottom: 1em">登	录</button>
+			  <button type="button" class="btn btn-default"  style="position: absolute; right: 1.3em; bottom: -2.5em; border: none; background: transparent; color: white; text-decoration:underline; ">忘记密码？</button>
+			</form>		
+
+		</div>
+	</div>
+
+</div>
+</body>
+
+</html>
